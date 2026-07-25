@@ -1,22 +1,37 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "8.13.1"
+    id 'io.qameta.allure' version '2.11.2'
 }
 
-group = 'ru.netology'
-version = '1.0-SNAPSHOT'
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
 sourceCompatibility = 11
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
+
+allure {
+    version = '2.20.1'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'org.postgresql:postgresql:42.7.2'
+    testImplementation 'com.codeborne:selenide:6.19.1'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
 }
 
 test {
     useJUnitPlatform()
+    //systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty 'chromeoptions.prefs',
+            System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
+    systemProperty 'db.url', System.getProperty('db.url', "jdbc:postgresql://localhost:5432/aqa-shop-diplom")
 }
