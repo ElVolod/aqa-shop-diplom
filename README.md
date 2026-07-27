@@ -16,3 +16,5 @@ IDE: IntelliJ IDEA.
 3.Запуск автотестов: команда ./gradlew clean test
 
 План работы: C:\Users\user\Desktop\NetologyNew\aqa-shop-diplom\docs
+Отчётные документы по итогам тестирования: C:\Users\user\Desktop\NetologyNew\aqa-shop-diplom\docs
+Отчётные документы по итогам автоматизации: C:\Users\user\Desktop\NetologyNew\aqa-shop-diplom\docs

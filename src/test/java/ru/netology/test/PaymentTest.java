@@ -223,7 +223,7 @@ public class PaymentTest {
                 "",
                 baseCard.getMonth(),
                 baseCard.getYear(),
-                DataHelper.getCyrillicOwner(),
+                baseCard.getOwner(),
                 baseCard.getCvc()
         );
         paymentPage.fillForm(cardInfo);
@@ -240,7 +240,7 @@ public class PaymentTest {
                 baseCard.getCardNumber(),
                 baseCard.getMonth(),
                 baseCard.getYear(),
-                DataHelper.getCyrillicOwner(),
+                baseCard.getOwner(),
                 ""
         );
         paymentPage.fillForm(cardInfo);
