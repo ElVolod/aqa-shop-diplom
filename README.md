@@ -15,3 +15,5 @@ IDE: IntelliJ IDEA.
 1.Запуск Docker: команда docker compose up
 2.Запуск jar-файла aqa-shop.jar: команда  java -jar artifacts/aqa-shop.jar
 3.Запуск автотестов: команда ./gradlew clean test
+
+План проекта: C:\Users\user\Desktop\NetologyNew\aqa-shop-diplom\docs
